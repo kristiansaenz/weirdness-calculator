@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/weirdness-calculator/static/css/main.b9d61666.chunk.css",
+    "main.js": "/weirdness-calculator/static/js/main.72d88d66.chunk.js",
+    "main.js.map": "/weirdness-calculator/static/js/main.72d88d66.chunk.js.map",
+    "runtime-main.js": "/weirdness-calculator/static/js/runtime-main.5190e9e8.js",
+    "runtime-main.js.map": "/weirdness-calculator/static/js/runtime-main.5190e9e8.js.map",
+    "static/js/2.89a132fd.chunk.js": "/weirdness-calculator/static/js/2.89a132fd.chunk.js",
+    "static/js/2.89a132fd.chunk.js.map": "/weirdness-calculator/static/js/2.89a132fd.chunk.js.map",
+    "index.html": "/weirdness-calculator/index.html",
+    "precache-manifest.2ec470350e2dc544f43fc56427c32544.js": "/weirdness-calculator/precache-manifest.2ec470350e2dc544f43fc56427c32544.js",
+    "service-worker.js": "/weirdness-calculator/service-worker.js",
+    "static/css/main.b9d61666.chunk.css.map": "/weirdness-calculator/static/css/main.b9d61666.chunk.css.map",
+    "static/media/thumbs-up.svg": "/weirdness-calculator/static/media/thumbs-up.92f39cf3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5190e9e8.js",
+    "static/js/2.89a132fd.chunk.js",
+    "static/css/main.b9d61666.chunk.css",
+    "static/js/main.72d88d66.chunk.js"
+  ]
+}

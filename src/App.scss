@@ -1,0 +1,75 @@
+@import "~bulma/bulma";
+@import "~bulma-slider";
+
+$p-font-size: 2vh;
+
+p {
+  font-size: $p-font-size;
+}
+
+/* Layout Sections */
+.search-gif {
+  background-color: aqua;
+}
+
+.results-gif {
+  background-color: aquamarine;
+}
+
+.is-search-container {
+  background-color: bisque;
+  padding: 2rem;
+}
+
+.info-text-container {
+  width: 80%;
+}
+
+/* Search Gif Section */
+.field {
+  margin: 2rem 0rem 0.5rem 0rem;
+}
+
+/* Search Results Section */
+.search-results {
+  margin: 2rem;
+  text-align: center;
+}
+
+.like-icon {
+  height: 1rem;
+}
+
+.result-box {
+  height: 10rem;
+  width: 15rem;
+  margin: auto;
+}
+
+/* Liked Gifs Section */
+.gif-list-section {
+  margin: 1.5rem;
+}
+
+.gif-list {
+  flex-wrap: wrap;
+}
+
+.gif {
+  height: 8rem;
+}
+
+.calculate-section {
+  margin: 5rem 0rem 2rem 0rem;
+  text-align: center;
+}
+
+.calc-button {
+  margin: auto;
+}
+
+/* Results Section */
+.results-section {
+  text-align: center;
+  min-height: 25rem;
+}

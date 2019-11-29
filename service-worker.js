@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/weirdness-calculator/precache-manifest.2ec470350e2dc544f43fc56427c32544.js"
+  "/weirdness-calculator/precache-manifest.c04725d3c26b0963b29fda93b33af6ce.js"
 );
 
 self.addEventListener('message', (event) => {

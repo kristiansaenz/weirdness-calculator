@@ -1,19 +1,30 @@
 import React from "react";
 
-function SearchGif() {
+function SearchGif(props) {
   return (
-    <div className="field has-addons">
-      <div className="control">
-        <input
-          className="input"
-          type="text"
-          placeholder="Find a GIF"
-        ></input>
+    <form onSubmit={props.handleSubmit}>
+      <div className="field has-addons">
+        <div className="control">
+          <input
+            className="input"
+            type="text"
+            value={props.searchedGif}
+            onChange={props.handleChange}
+            placeholder="Find a GIF"
+          />
+        </div>
+        <div className="control">
+          <a
+            className="button is-info"
+            type="submit"
+            value="Submit"
+            onClick={props.handleSubmit}
+          >
+            Search
+          </a>
+        </div>
       </div>
-      <div className="control">
-        <a className="button is-info">Search</a>
-      </div>
-    </div>
+    </form>
   );
 }
 

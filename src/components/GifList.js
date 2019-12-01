@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LikedGifList(props) {
+function GifList(props) {
   return (
     <div className="container gif-list-section">
       <div className="columns gif-list">
@@ -24,4 +24,4 @@ function LikedGifList(props) {
   );
 }
 
-export default LikedGifList;
+export default GifList;

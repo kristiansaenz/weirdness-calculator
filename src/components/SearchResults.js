@@ -2,6 +2,11 @@ import React from "react";
 import LikeIcon from "../images/thumbs-up.svg";
 
 function SearchResults(props) {
+
+  const addToLikedList = () => {
+    alert("added to liked list")
+  }
+
   return (
     <div className="search-results">
       <div className="box result-box">
@@ -14,11 +19,11 @@ function SearchResults(props) {
         </figure>
       </div>
       <button className="button is-info calc-button">
-        <img className="like-icon" src={LikeIcon} alt="like-gif"></img>
+        <img className="like-icon" src={LikeIcon} alt="like-gif" onClick={addToLikedList}></img>
       </button>
       <input
         className="slider is-fullwidth is-medium is-warning is-circle"
-        step="1"
+        step="10"
         min="0"
         max="100"
         value="50"

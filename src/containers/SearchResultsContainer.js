@@ -5,13 +5,14 @@ import axios from "axios";
 function SearchResultsContainer() {
   const [searchResult, setSearchResult] = useState([]);
 
-  const GIF_URL = "api.giphy.com/v1/gifs/translate";
+  const GIF_URL = "http://api.giphy.com/v1/gifs/translate";
   const API_KEY = "iuWW7RqfUxuHRrD6H33ZzFFmZTFLnFT9";
 
   useEffect(() => {
     const fetchData = async () => {
       const gif = await axios.get(
-        "http://api.giphy.com/v1/gifs/translate?api_key=iuWW7RqfUxuHRrD6H33ZzFFmZTFLnFT9&s=otter&weirdness=6"
+        // GIF_URL + "?api_key=" + API_KEY + "&s=" + searchedGif + "&weirdness=" + weirdness
+        GIF_URL + "?api_key=" + API_KEY + "&s=otter&weirdness=6"
       );
       setSearchResult(gif.data.data);
     };

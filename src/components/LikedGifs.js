@@ -7,7 +7,7 @@ function LikedGifs() {
     <div>
       <p className="title">Your Liked GIFs</p>
       <br />
-      <GifList columnSize="is-half" />
+      <GifList columnSize="is-half" addDeleteButtons={true} />
       <div className="calculate-section">
         <Link to="/results">
           <button class="button is-info calc-button">

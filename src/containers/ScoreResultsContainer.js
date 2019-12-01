@@ -7,7 +7,10 @@ function ScoreResultsContainer() {
     <section className="section">
     <div className="container results-section">
       <p className="subtitle">You scored 8 out of 10 on the weirdness scale!</p>
-      <GifList />
+      <br />
+      <GifList addDeleteButtons={false} />
+      <br />
+      <br />
       <Link to="/">
         <button className="button is-info calc-button">
           Start Over

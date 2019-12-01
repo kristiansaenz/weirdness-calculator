@@ -2,12 +2,17 @@ import React from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import GifList from "./GifList";
 
-function LikedGifs() {
+function LikedGifs(props) {
   return (
     <div>
       <p className="title">Your Liked GIFs</p>
       <br />
-      <GifList columnSize="is-half" addDeleteButtons={true} />
+      <GifList
+        gifs={props.gifs}
+        columnSize="is-half"
+        addDeleteButtons={true}
+        unlikeGif={props.unlikeGif}
+      />
       <div className="calculate-section">
         <Link to="/results">
           <button class="button is-info calc-button">

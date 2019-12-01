@@ -4,16 +4,16 @@ function Gif(props) {
   return (
     <article class="message is-info">
       <div class="message-header">
-      <p>seal dayz</p>
+      <p>{props.gif.title}</p>
         {props.deleteButtons ? 
-        <button class="delete"></button>
+        <button class="delete" onClick={() => props.unlikeGif(props.gif.id)}></button>
         :
         null}
       </div>
       <div class="message-body">
         <figure class="image is-2by1">
           <img
-            src="https://media.giphy.com/media/B86lxbrMSZ0SQ/giphy.gif"
+            src={props.gif.url}
           />
         </figure>
       </div>

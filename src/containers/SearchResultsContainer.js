@@ -20,8 +20,8 @@ function SearchResultsContainer() {
     fetchData();
   }, []);
 
-  const addToLikedList = () => {
-    alert("added to liked list");
+  const likeGif = () => {
+    alert("liked");
   };
 
   const handleSliderChange = e => {

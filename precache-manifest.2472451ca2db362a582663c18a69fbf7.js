@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "84bc3e5b3c3699e8131bbc7668d4a361",
+    "revision": "22725ca741fbf740f636363b037e7161",
     "url": "/weirdness-calculator/index.html"
   },
   {
-    "revision": "69eebf49973ecbdc2a6b",
+    "revision": "397e475d759457e36b36",
     "url": "/weirdness-calculator/static/css/main.b21db7c2.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weirdness-calculator/static/js/2.5498993a.chunk.js"
   },
   {
-    "revision": "69eebf49973ecbdc2a6b",
-    "url": "/weirdness-calculator/static/js/main.1ae85058.chunk.js"
+    "revision": "397e475d759457e36b36",
+    "url": "/weirdness-calculator/static/js/main.f0d023bc.chunk.js"
   },
   {
     "revision": "1908a4d47b2c0488af98",

@@ -4,6 +4,7 @@ import axios from "axios";
 
 function SearchResultsContainer() {
   const [searchResult, setSearchResult] = useState([]);
+  const [weirdness, setWeirdness] = useState(0);
 
   const GIF_URL = "http://api.giphy.com/v1/gifs/translate";
   const API_KEY = "iuWW7RqfUxuHRrD6H33ZzFFmZTFLnFT9";
@@ -19,9 +20,23 @@ function SearchResultsContainer() {
     fetchData();
   }, []);
 
+  const addToLikedList = () => {
+    alert("added to liked list");
+    //dispatch action to add list object to giflist state
+  };
+
+  const handleSliderChange = e => {
+    setWeirdness(parseInt(e.target.value));
+  };
+
   return (
     <div className="container">
-      <SearchResults gif={searchResult} />
+      <SearchResults
+        gif={searchResult}
+        addToLikedList={addToLikedList}
+        handleChange={handleSliderChange}
+        weirdness={weirdness}
+      />
     </div>
   );
 }

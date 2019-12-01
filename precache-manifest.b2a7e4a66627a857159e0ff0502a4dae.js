@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "22725ca741fbf740f636363b037e7161",
+    "revision": "c4eb3880104dcb7601fa9f452cf97f87",
     "url": "/weirdness-calculator/index.html"
   },
   {

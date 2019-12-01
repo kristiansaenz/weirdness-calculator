@@ -11,6 +11,10 @@ $p-font-size: 2vh;
   padding: 2rem 1.5rem;
 }
 
+.subtitle {
+  margin-top: 3rem;
+}
+
 p {
   font-size: $p-font-size;
 }
@@ -49,8 +53,7 @@ p {
 }
 
 .result-box {
-  height: 10rem;
-  width: 15rem;
+  width: 25rem;
   margin: auto;
 }
 

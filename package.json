@@ -4,6 +4,7 @@
   "homepage": "https://kristiansaenz.github.io/weirdness-calculator",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
     "bulma": "^0.8.0",
     "bulma-slider": "^2.0.0",
     "gh-pages": "^2.1.1",
@@ -13,7 +14,8 @@
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "redux": "^4.0.4"
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "start": "react-scripts start",

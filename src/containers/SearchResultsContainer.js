@@ -7,7 +7,7 @@ import { setWeirdness } from "../actions/search-actions";
 
 class SearchResultsContainer extends React.Component {
   state = {
-    searchResult: {},
+    // searchResult: {},
     weirdnessInput: 0
   };
 
@@ -28,7 +28,7 @@ class SearchResultsContainer extends React.Component {
     return (
       <div className="container">
         <SearchResults
-          gif={this.state.searchResult}
+          gif={this.props.searchResult}
           addToLikedList={this.likeGif}
           handleChange={this.handleSliderChange}
           weirdnessInput={this.state.weirdnessInput}
@@ -38,4 +38,8 @@ class SearchResultsContainer extends React.Component {
   }
 }
 
-export default connect(null, { setWeirdness })(SearchResultsContainer);
+const mapStateToProps = state => ({
+  searchResult: state.searchResult
+})
+
+export default connect(mapStateToProps, { setWeirdness })(SearchResultsContainer);

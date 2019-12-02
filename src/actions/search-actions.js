@@ -8,17 +8,20 @@ export const searchGify = ({ searchedGif, searchedWeirdness }) => {
     .get(
       `${GIF_URL}?api_key=${API_KEY}&s=${searchedGif}&weirdness=${searchedWeirdness}`
     )
-    // axios.get(`${GIF_URL}?api_key=${API_KEY}&s=otters&weirdness=3`)
     .then(res => {
       return {
-        type: "SET_GIF_DATA",
-        payload: "TEST"
+        type: SET_SEARCH_RESULT,
+        payload: res.json
       };
     });
 };
 
-export const setSearchTerm = () => {
-    
+export const setSearchTerm = (search) => dispatch => {
+    console.log("setting search term")
+    dispatch({
+        type: SET_SEARCH_TERM,
+        payload: search
+    })
 }
 
 export const setWeirdness = (weirdnessInput) => dispatch => {
@@ -29,6 +32,21 @@ export const setWeirdness = (weirdnessInput) => dispatch => {
     })
 }
 
-export const setSearchResult = () => {
-    
+export const setSearchResult = (search, weirdnessInput) => dispatch => {
+
+      axios.get(`${GIF_URL}?api_key=${API_KEY}&s=${search}&weirdness=${weirdnessInput}`
+      )
+      .then(res =>
+        dispatch({
+          type: SET_SEARCH_RESULT,
+          payload: res.data.data
+        })
+      )
+      .catch(err => {
+        // dispatch({
+        //   type: AUTH_ERROR
+        // });
+        console.log("cant get gif")
+      });
+
 }

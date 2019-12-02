@@ -1,10 +1,10 @@
-const likeGif = () => {
+export const likeGif = () => {
   return {
     type: "LIKE"
   };
 };
 
-const unlikeGif = () => {
+export const unlikeGif = () => {
   return {
     type: "UNLIKE"
   };

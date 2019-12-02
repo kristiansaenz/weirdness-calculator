@@ -7,6 +7,7 @@ function SearchGifContainer() {
 
   const handleSearchSubmit = e => {
     e.preventDefault();
+    //dispatch action to update search
     alert("You searched for term " + searchedGif);
   };
 

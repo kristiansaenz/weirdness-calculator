@@ -58,8 +58,13 @@ p {
 }
 
 /* Liked Gifs Section */
+.title:not(:last-child){
+  margin: 0;
+}
+
 .gif-list-section {
   margin: 1.5rem;
+  min-height: 30rem;
 }
 
 .gif-list {
@@ -71,7 +76,7 @@ p {
 }
 
 .calculate-section {
-  margin: 5rem 0rem 2rem 0rem;
+  // margin: 5rem 0rem 2rem 0rem;
   text-align: center;
 }
 
@@ -83,4 +88,10 @@ p {
 .results-section {
   text-align: center;
   min-height: 25rem;
+}
+
+@media only screen and (max-width: 730px) {
+  .result-box {
+    width: auto;
+  }
 }

@@ -3,6 +3,12 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import GifList from "./GifList";
 
 function LikedGifs(props) {
+
+  const likesNeeded = () => {
+    let likedGifs = props.gifs.length;
+    return 5 - likedGifs;
+  }
+
   return (
     <div>
       <p className="title">Your Liked GIFs</p>
@@ -14,8 +20,10 @@ function LikedGifs(props) {
         unlikeGif={props.unlikeGif}
       />
       <div className="calculate-section">
+        <p>You must <i>like</i> {likesNeeded()} more gifs to calculate your score!</p>
+        <br />
         <Link to="/results">
-          <button class="button is-info calc-button">
+          <button className="button is-info calc-button">
             Calculate Your Weirdness
           </button>
         </Link>

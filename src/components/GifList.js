@@ -6,7 +6,7 @@ function GifList(props) {
     <div className="container gif-list-section">
       <div className="columns gif-list">
         {props.gifs && props.gifs.map(gif => (
-          <div className={`column ${props.columnSize}`}>
+          <div className={`column ${props.columnSize}`} key={gif.id}>
             <Gif
               key={gif.id}
               gif={gif}

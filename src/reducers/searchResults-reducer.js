@@ -1,7 +1,9 @@
-const SearchResultsReducer = (state = 0, action) => {
+const SearchResultsReducer = (state = {}, action) => {
     switch (action.type) {
-      case "UPDATE_SEARCH":
+      case "UPDATE_RESULTS":
         return state + 1;
+      case "SET_GIF_DATA":
+        return {...action.payload, ...state};
       default:
         return state;
     }

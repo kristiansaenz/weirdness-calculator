@@ -1,38 +1,44 @@
 import React, { useState, useEffect } from "react";
 import SearchResults from "../components/SearchResults";
-import axios from "axios";
+import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import { likeGif } from "../actions/gifList-actions";
+import { searchGify } from "../actions/searchResults-actions";
+
 
 function SearchResultsContainer() {
   const [searchResult, setSearchResult] = useState([]);
   const [weirdness, setWeirdness] = useState(0);
 
-  const GIF_URL = "https://api.giphy.com/v1/gifs/translate";
-  const API_KEY = "iuWW7RqfUxuHRrD6H33ZzFFmZTFLnFT9";
+  const { searchTerm, searchWeirdness  } = useSelector(state => ({
+    searchTerm: state.searchedTerm,
+    searchWeirdness: state.searchedWeirdness,
+    searchResult: state.searchResult
+  }), shallowEqual);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const gif = await axios.get(
-        // GIF_URL + "?api_key=" + API_KEY + "&s=" + searchedGif + "&weirdness=" + weirdness
-        GIF_URL + "?api_key=" + API_KEY + "&s=otter&weirdness=6"
-      );
-      setSearchResult(gif.data.data);
-    };
-    fetchData();
+    // dispatch(callGiphyAPI(searchTerm, searchWeirdness));
+    dispatch(searchGify)
+
   }, []);
 
-  const likeGif = () => {
-    alert("liked");
+  const likeGif = (id) => {
+    console.log("liked");
+    // dispatch({ type: LIKE_GIF, payload: 'My payload' })
+    // dispatch(likeGif());
   };
 
   const handleSliderChange = e => {
     setWeirdness(parseInt(e.target.value));
+    //dispatch(update searchWeirdness)
+    //call api again
   };
 
   return (
     <div className="container">
       <SearchResults
         gif={searchResult}
-        addToLikedList={addToLikedList}
+        addToLikedList={likeGif}
         handleChange={handleSliderChange}
         weirdness={weirdness}
       />

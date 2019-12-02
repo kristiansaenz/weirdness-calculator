@@ -26,7 +26,7 @@ function SearchResults(props) {
         defaultValue="0"
         type="range"
       ></input>
-      <p>Weirdness: {props.weirdness}</p>
+      <p>Weirdness: {props.weirdnessInput}</p>
     </div>
   );
 }

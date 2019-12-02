@@ -1,7 +1,12 @@
-const SearchWeirdnessReducer = (state = 5, action) => {
+import { SET_WEIRDNESS } from "../actions/types"
+
+const initalState = 0;
+
+const SearchWeirdnessReducer = (state = initalState, action) => {
     switch (action.type) {
-      case "UPDATE_WEIRDNESS":
-        return state + 1;
+      case "SET_WEIRDNESS":
+        let newState = action.payload;
+        return newState
       default:
         return state;
     }

@@ -3,7 +3,6 @@ import Gif from "./Gif";
 
 function GifList(props) {
   return (
-    <div className="container gif-list-section">
       <div className="columns gif-list">
         {props.gifs && props.gifs.map(gif => (
           <div className={`column ${props.columnSize}`} key={gif.id}>
@@ -16,7 +15,6 @@ function GifList(props) {
           </div>
         ))}
       </div>
-    </div>
   );
 }
 

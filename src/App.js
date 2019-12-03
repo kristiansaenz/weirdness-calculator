@@ -19,7 +19,7 @@ function App() {
                 <SearchResultsContainer />
               </div>
             </div>
-            <div className="column results-gif">
+            <div className="column is-liked-gifs-container">
               <LikedGifsContainer />
             </div>
           </div>

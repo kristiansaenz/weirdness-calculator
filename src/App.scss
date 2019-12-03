@@ -2,6 +2,11 @@
 @import "~bulma-slider";
 
 $p-font-size: 2vh;
+$title-font-size: 3vh;
+$header-font-size: 4vh;
+$search-section-color: bisque;
+$search-results-section-color: aqua;
+$liked-gifs-section-color: aquamarine;
 
 .hero-body {
   padding: 1.5rem 1.5rem;
@@ -9,6 +14,14 @@ $p-font-size: 2vh;
 
 .section {
   padding: 2rem 1.5rem;
+}
+
+.title {
+  font-size: $title-font-size;
+}
+
+.is-hero-text {
+  font-size: $header-font-size;
 }
 
 .subtitle {
@@ -20,17 +33,20 @@ p {
 }
 
 /* Layout Sections */
-.search-gif {
-  background-color: aqua;
-}
-
-.results-gif {
-  background-color: aquamarine;
-}
-
 .is-search-container {
-  background-color: bisque;
+  background-color: $search-section-color;
+  border-radius: 2rem 0rem 0rem;
   padding: 2rem;
+}
+
+.is-results-container {
+  background-color: $search-results-section-color;
+  border-radius: 0rem 0rem 0rem 2rem;
+}
+
+.is-liked-gifs-container {
+  background-color: $liked-gifs-section-color;
+  border-radius: 0rem 2rem 2rem 0rem;
 }
 
 .info-text-container {
@@ -76,7 +92,6 @@ p {
 }
 
 .calculate-section {
-  // margin: 5rem 0rem 2rem 0rem;
   text-align: center;
 }
 

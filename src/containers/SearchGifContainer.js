@@ -13,7 +13,9 @@ class SearchGifContainer extends React.Component {
     e.preventDefault();
     this.props.setSearchTerm(this.state.search);
     this.props.setSearchResult(this.state.search, this.props.searchedWeirdness);
-    alert("You searched for term " + this.state.search + "Weirdness " + this.props.searchedWeirdness);
+    this.setState({
+      search: ""
+    })
   };
 
   handleSearchChange = e => {

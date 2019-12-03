@@ -3,18 +3,6 @@ import { SET_SEARCH_TERM, SET_WEIRDNESS, SET_SEARCH_RESULT } from "./types";
 const GIF_URL = "https://api.giphy.com/v1/gifs/translate";
 const API_KEY = "iuWW7RqfUxuHRrD6H33ZzFFmZTFLnFT9";
 
-export const searchGify = ({ searchedGif, searchedWeirdness }) => {
-  axios
-    .get(
-      `${GIF_URL}?api_key=${API_KEY}&s=${searchedGif}&weirdness=${searchedWeirdness}`
-    )
-    .then(res => {
-      return {
-        type: SET_SEARCH_RESULT,
-        payload: res.json
-      };
-    });
-};
 
 export const setSearchTerm = (search) => dispatch => {
     console.log("setting search term")
@@ -34,12 +22,17 @@ export const setWeirdness = (weirdnessInput) => dispatch => {
 
 export const setSearchResult = (search, weirdnessInput) => dispatch => {
 
-      axios.get(`${GIF_URL}?api_key=${API_KEY}&s=${search}&weirdness=${weirdnessInput}`
-      )
+      axios.get(`${GIF_URL}?api_key=${API_KEY}&s=${search}&weirdness=${weirdnessInput}`)
       .then(res =>
         dispatch({
           type: SET_SEARCH_RESULT,
-          payload: res.data.data
+          // payload: res.data.data
+          payload: {
+            id: res.data.data.id,
+            title: res.data.data.title,
+            url: res.data.data.images.original.url,
+            weirdness: weirdnessInput
+          }
         })
       )
       .catch(err => {

@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
 import SearchResults from "../components/SearchResults";
 import { connect } from 'react-redux'
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
 import { likeGif } from "../actions/gifList-actions";
-import { setWeirdness } from "../actions/search-actions";
+import { setWeirdness, setSearchResult } from "../actions/search-actions";
 
 class SearchResultsContainer extends React.Component {
   state = {
-    // searchResult: {},
     weirdnessInput: 0
   };
 
-  likeGif = id => {
-    console.log("liked");
-    alert("liked")
-    // dispatch(likeGif());
+  likeGif = () => {
+    //add list check to see if > 5
+    //add disable
+    this.props.likeGif(this.props.searchResult);
   };
 
   handleSliderChange = e => {
@@ -22,6 +20,7 @@ class SearchResultsContainer extends React.Component {
       weirdnessInput: parseInt(e.target.value)
     })
     this.props.setWeirdness(parseInt(e.target.value));
+    this.props.setSearchResult(this.props.searchedTerm, parseInt(e.target.value))
   };
 
   render() {
@@ -39,7 +38,8 @@ class SearchResultsContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  searchResult: state.searchResult
+  searchResult: state.searchResult,
+  searchedTerm: state.searchedTerm
 })
 
-export default connect(mapStateToProps, { setWeirdness })(SearchResultsContainer);
+export default connect(mapStateToProps, { setWeirdness, setSearchResult, likeGif })(SearchResultsContainer);

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import InfoText from "../layout/InfoText";
 import SearchGif from "../components/SearchGif";
 import { setSearchTerm, setSearchResult } from "../actions/search-actions";
+import { clearLikeError } from "../actions/errors-actions";
 
 class SearchGifContainer extends React.Component {
   state = {
@@ -13,6 +14,7 @@ class SearchGifContainer extends React.Component {
     e.preventDefault();
     this.props.setSearchTerm(this.state.search);
     this.props.setSearchResult(this.state.search, this.props.searchedWeirdness);
+    this.props.clearLikeError();
     this.setState({
       search: ""
     });
@@ -29,6 +31,7 @@ class SearchGifContainer extends React.Component {
       <div className="container">
         <InfoText />
         <SearchGif
+          searchInput={this.state.search}
           handleSubmit={this.handleSearchSubmit}
           handleChange={this.handleSearchChange}
         />
@@ -41,6 +44,6 @@ const mapStateToProps = state => ({
   searchedWeirdness: state.searchedWeirdness
 });
 
-export default connect(mapStateToProps, { setSearchTerm, setSearchResult })(
+export default connect(mapStateToProps, { setSearchTerm, setSearchResult, clearLikeError })(
   SearchGifContainer
 );

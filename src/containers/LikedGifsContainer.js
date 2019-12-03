@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import LikedGifs from "../components/LikedGifs";
 import { connect } from "react-redux";
 import { unlikeGif } from "../actions/gifList-actions";

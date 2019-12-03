@@ -1,5 +1,11 @@
 import axios from "axios";
-import { SET_SEARCH_TERM, SET_WEIRDNESS, SET_SEARCH_RESULT } from "./types";
+import {
+  SET_SEARCH_TERM,
+  SET_WEIRDNESS,
+  SET_SEARCH_RESULT,
+  SEARCH_RESULT_ERROR,
+  CLEAR_SEARCH_RESULT
+} from "./types";
 const GIF_URL = "https://api.giphy.com/v1/gifs/translate";
 const API_KEY = "iuWW7RqfUxuHRrD6H33ZzFFmZTFLnFT9";
 
@@ -34,9 +40,18 @@ export const setSearchResult = (search, weirdnessInput) => dispatch => {
       })
     )
     .catch(err => {
-      // dispatch({
-      //   type: SEARCH_RESULT_ERROR
-      // });
       console.log("cant get gif");
+      dispatch({
+        type: SEARCH_RESULT_ERROR,
+        payload: {
+          error: "can't find gif"
+        }
+      });
     });
 };
+
+export const clearSearchResult = () => dispatch => {
+  dispatch({
+    type: CLEAR_SEARCH_RESULT
+  });
+}

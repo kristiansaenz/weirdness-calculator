@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.scss";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
 import SearchGifContainer from "./containers/SearchGifContainer";
 import LikedGifsContainer from "./containers/LikedGifsContainer";
 import SearchResultsContainer from "./containers/SearchResultsContainer"
@@ -19,7 +17,7 @@ function App() {
                 <SearchResultsContainer />
               </div>
             </div>
-            <div className="column results-gif">
+            <div className="column is-liked-gifs-container">
               <LikedGifsContainer />
             </div>
           </div>

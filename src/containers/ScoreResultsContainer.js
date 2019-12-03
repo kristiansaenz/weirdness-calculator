@@ -33,7 +33,12 @@ class ScoreResultsContainer extends React.Component {
           <br />
           <br />
           <Link to="/">
-            <button className="button is-info calc-button" onClick={this.clearCalculator}>Start Over</button>
+            <button
+              className="button is-info calc-button"
+              onClick={this.clearCalculator}
+            >
+              Start Over
+            </button>
           </Link>
         </div>
       </section>
@@ -45,4 +50,6 @@ const mapStateToProps = state => ({
   gifList: state.gifList
 });
 
-export default connect(mapStateToProps, { clearSearchResult, clearList })(ScoreResultsContainer);
+export default connect(mapStateToProps, { clearSearchResult, clearList })(
+  ScoreResultsContainer
+);

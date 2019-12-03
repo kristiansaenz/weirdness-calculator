@@ -3,7 +3,11 @@ import LikeIcon from "../images/thumbs-up.svg";
 
 function SearchResults(props) {
   const renderLikeButton = () => {
-    if (props.gifList.length >= 5 || Object.keys(props.gif).length === 0) {
+    if (
+      props.gifList.length >= 5 ||
+      Object.keys(props.gif).length === 0 ||
+      props.gif.error
+    ) {
       return (
         <a className="button is-info like-button" disabled>
           <img className="like-icon" src={LikeIcon} alt="like-gif"></img>
@@ -26,11 +30,9 @@ function SearchResults(props) {
   const renderGifDisplay = () => {
     if (Object.keys(props.gif).length === 0) {
       return <p>Search for a cool gif :-)</p>;
-    } 
-    else if (props.gif.error) {
+    } else if (props.gif.error) {
       return <p>{`Sorry, ${props.gif.error} :(`}</p>;
-    }
-    else {
+    } else {
       return (
         <React.Fragment>
           <p>{props.gif.title}</p>

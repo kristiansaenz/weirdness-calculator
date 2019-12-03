@@ -15,7 +15,6 @@ export const unlikeGif = id => {
 };
 
 export const clearList = () => {
-  console.log("clearing gif list");
   return {
     type: CLEAR_LIST
   };

@@ -44,6 +44,8 @@ const mapStateToProps = state => ({
   searchedWeirdness: state.searchedWeirdness
 });
 
-export default connect(mapStateToProps, { setSearchTerm, setSearchResult, clearLikeError })(
-  SearchGifContainer
-);
+export default connect(mapStateToProps, {
+  setSearchTerm,
+  setSearchResult,
+  clearLikeError
+})(SearchGifContainer);

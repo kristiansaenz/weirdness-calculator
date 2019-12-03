@@ -7,15 +7,14 @@ import { setWeirdness, setSearchResult } from "../actions/search-actions";
 
 class SearchResultsContainer extends React.Component {
   state = {
-    weirdnessInput: 0,
+    weirdnessInput: 0
   };
 
-  likeGif = (id) => {
+  likeGif = id => {
     let alreadyExists = this.props.gifList.some(gif => gif.id === id);
-    if(alreadyExists){
+    if (alreadyExists) {
       this.props.setLikeError("You already liked this gif!");
-    }
-    else{
+    } else {
       this.props.likeGif(this.props.searchResult);
     }
   };
@@ -59,6 +58,6 @@ export default connect(mapStateToProps, {
   setWeirdness,
   setSearchResult,
   likeGif,
-  setLikeError, 
+  setLikeError,
   clearLikeError
 })(SearchResultsContainer);

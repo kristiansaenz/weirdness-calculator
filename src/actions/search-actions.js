@@ -40,11 +40,11 @@ export const setSearchResult = (search, weirdnessInput) => dispatch => {
       })
     )
     .catch(err => {
-      console.log("cant get gif");
       dispatch({
         type: SEARCH_RESULT_ERROR,
         payload: {
-          error: "can't find gif"
+          error: "can't find gif",
+          msg: err
         }
       });
     });
@@ -54,4 +54,4 @@ export const clearSearchResult = () => dispatch => {
   dispatch({
     type: CLEAR_SEARCH_RESULT
   });
-}
+};

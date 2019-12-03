@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weirdness-calculator/static/css/main.4018e394.chunk.css",
+    "main.css": "/weirdness-calculator/static/css/main.7e3a50cc.chunk.css",
     "main.js": "/weirdness-calculator/static/js/main.a583aaca.chunk.js",
     "main.js.map": "/weirdness-calculator/static/js/main.a583aaca.chunk.js.map",
     "runtime-main.js": "/weirdness-calculator/static/js/runtime-main.5190e9e8.js",
@@ -8,9 +8,9 @@
     "static/js/2.1efa49fa.chunk.js": "/weirdness-calculator/static/js/2.1efa49fa.chunk.js",
     "static/js/2.1efa49fa.chunk.js.map": "/weirdness-calculator/static/js/2.1efa49fa.chunk.js.map",
     "index.html": "/weirdness-calculator/index.html",
-    "precache-manifest.f9d8a56d2006345b6094498ab82dfb04.js": "/weirdness-calculator/precache-manifest.f9d8a56d2006345b6094498ab82dfb04.js",
+    "precache-manifest.a66a40c4958965690d160e106d0dbc02.js": "/weirdness-calculator/precache-manifest.a66a40c4958965690d160e106d0dbc02.js",
     "service-worker.js": "/weirdness-calculator/service-worker.js",
-    "static/css/main.4018e394.chunk.css.map": "/weirdness-calculator/static/css/main.4018e394.chunk.css.map",
+    "static/css/main.7e3a50cc.chunk.css.map": "/weirdness-calculator/static/css/main.7e3a50cc.chunk.css.map",
     "static/media/bulma.png": "/weirdness-calculator/static/media/bulma.e0eab74d.png",
     "static/media/git.svg": "/weirdness-calculator/static/media/git.4d86c866.svg",
     "static/media/react.svg": "/weirdness-calculator/static/media/react.eab76719.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.5190e9e8.js",
     "static/js/2.1efa49fa.chunk.js",
-    "static/css/main.4018e394.chunk.css",
+    "static/css/main.7e3a50cc.chunk.css",
     "static/js/main.a583aaca.chunk.js"
   ]
 }

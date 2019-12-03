@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/weirdness-calculator/static/css/main.e7e1d75b.chunk.css",
-    "main.js": "/weirdness-calculator/static/js/main.473cf783.chunk.js",
-    "main.js.map": "/weirdness-calculator/static/js/main.473cf783.chunk.js.map",
+    "main.css": "/weirdness-calculator/static/css/main.797f0b9e.chunk.css",
+    "main.js": "/weirdness-calculator/static/js/main.df1cf4e6.chunk.js",
+    "main.js.map": "/weirdness-calculator/static/js/main.df1cf4e6.chunk.js.map",
     "runtime-main.js": "/weirdness-calculator/static/js/runtime-main.5190e9e8.js",
     "runtime-main.js.map": "/weirdness-calculator/static/js/runtime-main.5190e9e8.js.map",
-    "static/js/2.76a343f4.chunk.js": "/weirdness-calculator/static/js/2.76a343f4.chunk.js",
-    "static/js/2.76a343f4.chunk.js.map": "/weirdness-calculator/static/js/2.76a343f4.chunk.js.map",
+    "static/js/2.1efa49fa.chunk.js": "/weirdness-calculator/static/js/2.1efa49fa.chunk.js",
+    "static/js/2.1efa49fa.chunk.js.map": "/weirdness-calculator/static/js/2.1efa49fa.chunk.js.map",
     "index.html": "/weirdness-calculator/index.html",
-    "precache-manifest.c4321053fdba36e7c64487c3bc8ea1ff.js": "/weirdness-calculator/precache-manifest.c4321053fdba36e7c64487c3bc8ea1ff.js",
+    "precache-manifest.e29be3ac7739e852bf8dfa450deb9318.js": "/weirdness-calculator/precache-manifest.e29be3ac7739e852bf8dfa450deb9318.js",
     "service-worker.js": "/weirdness-calculator/service-worker.js",
-    "static/css/main.e7e1d75b.chunk.css.map": "/weirdness-calculator/static/css/main.e7e1d75b.chunk.css.map",
+    "static/css/main.797f0b9e.chunk.css.map": "/weirdness-calculator/static/css/main.797f0b9e.chunk.css.map",
+    "static/media/bulma.png": "/weirdness-calculator/static/media/bulma.e0eab74d.png",
+    "static/media/git.svg": "/weirdness-calculator/static/media/git.4d86c866.svg",
+    "static/media/react.svg": "/weirdness-calculator/static/media/react.eab76719.svg",
     "static/media/thumbs-up.svg": "/weirdness-calculator/static/media/thumbs-up.92f39cf3.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5190e9e8.js",
-    "static/js/2.76a343f4.chunk.js",
-    "static/css/main.e7e1d75b.chunk.css",
-    "static/js/main.473cf783.chunk.js"
+    "static/js/2.1efa49fa.chunk.js",
+    "static/css/main.797f0b9e.chunk.css",
+    "static/js/main.df1cf4e6.chunk.js"
   ]
 }

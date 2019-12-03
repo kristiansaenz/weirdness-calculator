@@ -1,9 +1,12 @@
-const SearchResultsReducer = (state = {}, action) => {
+import { SET_SEARCH_RESULT } from "../actions/types"
+
+const initalState = {};
+
+const SearchResultsReducer = (state = initalState, action) => {
     switch (action.type) {
-      case "UPDATE_RESULTS":
-        return state + 1;
-      case "SET_GIF_DATA":
-        return {...action.payload, ...state};
+      case "SET_SEARCH_RESULT":
+        let newState = action.payload;
+        return newState
       default:
         return state;
     }

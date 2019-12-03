@@ -1,29 +1,44 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import InfoText from "../layout/InfoText";
 import SearchGif from "../components/SearchGif";
+import { setSearchTerm, setSearchResult } from "../actions/search-actions";
 
-function SearchGifContainer() {
-  const [searchedGif, setSearchedGif] = useState("");
+class SearchGifContainer extends React.Component {
+  state = {
+    search: ""
+  };
 
-  const handleSearchSubmit = e => {
+  handleSearchSubmit = e => {
     e.preventDefault();
-    //dispatch action to update search
-    alert("You searched for term " + searchedGif);
+    this.props.setSearchTerm(this.state.search);
+    this.props.setSearchResult(this.state.search, this.props.searchedWeirdness);
+    this.setState({
+      search: ""
+    })
   };
 
-  const handleSearchChange = e => {
-    setSearchedGif(e.target.value);
+  handleSearchChange = e => {
+    this.setState({
+      search: e.target.value
+    });
   };
 
-  return (
-    <div className="container">
-      <InfoText />
-      <SearchGif
-        handleSubmit={handleSearchSubmit}
-        handleChange={handleSearchChange}
-      />
-    </div>
-  );
+  render() {
+    return (
+      <div className="container">
+        <InfoText />
+        <SearchGif
+          handleSubmit={this.handleSearchSubmit}
+          handleChange={this.handleSearchChange}
+        />
+      </div>
+    );
+  }
 }
 
-export default SearchGifContainer;
+const mapStateToProps = state => ({
+  searchedWeirdness: state.searchedWeirdness
+})
+
+export default connect(mapStateToProps, { setSearchTerm, setSearchResult })(SearchGifContainer);

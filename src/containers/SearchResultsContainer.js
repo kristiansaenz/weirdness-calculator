@@ -1,49 +1,45 @@
 import React, { useState, useEffect } from "react";
 import SearchResults from "../components/SearchResults";
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
+import { connect } from 'react-redux'
 import { likeGif } from "../actions/gifList-actions";
-import { searchGify } from "../actions/searchResults-actions";
+import { setWeirdness, setSearchResult } from "../actions/search-actions";
 
-
-function SearchResultsContainer() {
-  const [searchResult, setSearchResult] = useState([]);
-  const [weirdness, setWeirdness] = useState(0);
-
-  const { searchTerm, searchWeirdness  } = useSelector(state => ({
-    searchTerm: state.searchedTerm,
-    searchWeirdness: state.searchedWeirdness,
-    searchResult: state.searchResult
-  }), shallowEqual);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    // dispatch(callGiphyAPI(searchTerm, searchWeirdness));
-    dispatch(searchGify)
-
-  }, []);
-
-  const likeGif = (id) => {
-    console.log("liked");
-    // dispatch({ type: LIKE_GIF, payload: 'My payload' })
-    // dispatch(likeGif());
+class SearchResultsContainer extends React.Component {
+  state = {
+    weirdnessInput: 0
   };
 
-  const handleSliderChange = e => {
-    setWeirdness(parseInt(e.target.value));
-    //dispatch(update searchWeirdness)
-    //call api again
+  likeGif = () => {
+    //add list check to see if > 5
+    //add disable
+    this.props.likeGif(this.props.searchResult);
   };
 
-  return (
-    <div className="container">
-      <SearchResults
-        gif={searchResult}
-        addToLikedList={likeGif}
-        handleChange={handleSliderChange}
-        weirdness={weirdness}
-      />
-    </div>
-  );
+  handleSliderChange = e => {
+    this.setState({
+      weirdnessInput: parseInt(e.target.value)
+    })
+    this.props.setWeirdness(parseInt(e.target.value));
+    this.props.setSearchResult(this.props.searchedTerm, parseInt(e.target.value))
+  };
+
+  render() {
+    return (
+      <div className="container">
+        <SearchResults
+          gif={this.props.searchResult}
+          addToLikedList={this.likeGif}
+          handleChange={this.handleSliderChange}
+          weirdnessInput={this.state.weirdnessInput}
+        />
+      </div>
+    );
+  }
 }
 
-export default SearchResultsContainer;
+const mapStateToProps = state => ({
+  searchResult: state.searchResult,
+  searchedTerm: state.searchedTerm
+})
+
+export default connect(mapStateToProps, { setWeirdness, setSearchResult, likeGif })(SearchResultsContainer);

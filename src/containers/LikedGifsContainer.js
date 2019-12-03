@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import LikedGifs from "../components/LikedGifs";
-import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { connect } from "react-redux";
+import { unlikeGif } from "../actions/gifList-actions";
 
-function LikedGifsContainer() {
-  const { gifList } = useSelector(
-    state => ({
-      gifList: state.gifList
-    }),
-    shallowEqual
-  );
+class LikedGifsContainer extends React.Component {
 
-  const unlikeGif = id => {
-    alert("here i dispatch action to UNLIKE");
-    // setGifList(gifList.filter(gif => gif.id !== id));
+  unlikeGif = id => {
+    this.props.unlikeGif(id);
   };
 
-  return (
-    <div className="container">
-      <LikedGifs gifs={gifList} unlikeGif={unlikeGif} />
-    </div>
-  );
+  render() {
+    return (
+      <div className="container">
+        <LikedGifs gifs={this.props.gifList} unlikeGif={this.unlikeGif} />
+      </div>
+    );
+  }
 }
 
-export default LikedGifsContainer;
+const MapStateToProps = state => ({
+  gifList : state.gifList
+})
+
+export default connect(MapStateToProps, { unlikeGif })(LikedGifsContainer);

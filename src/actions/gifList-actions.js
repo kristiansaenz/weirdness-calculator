@@ -1,11 +1,15 @@
-export const likeGif = () => {
+import { LIKE_GIF, UNLIKE_GIF } from "./types";
+
+export const likeGif = (gif) => {
   return {
-    type: "LIKE"
+    type: LIKE_GIF,
+    payload: gif
   };
 };
 
-export const unlikeGif = () => {
+export const unlikeGif = (id) => {
   return {
-    type: "UNLIKE"
+    type: UNLIKE_GIF,
+    payload: id
   };
 };

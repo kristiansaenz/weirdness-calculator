@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { unlikeGif } from "../actions/gifList-actions";
 
 class LikedGifsContainer extends React.Component {
-
   unlikeGif = id => {
     this.props.unlikeGif(id);
   };
@@ -19,7 +18,7 @@ class LikedGifsContainer extends React.Component {
 }
 
 const MapStateToProps = state => ({
-  gifList : state.gifList
-})
+  gifList: state.gifList
+});
 
 export default connect(MapStateToProps, { unlikeGif })(LikedGifsContainer);

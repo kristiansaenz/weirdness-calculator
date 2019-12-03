@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchResults from "../components/SearchResults";
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 import { likeGif } from "../actions/gifList-actions";
 import { setWeirdness, setSearchResult } from "../actions/search-actions";
 
@@ -18,9 +18,12 @@ class SearchResultsContainer extends React.Component {
   handleSliderChange = e => {
     this.setState({
       weirdnessInput: parseInt(e.target.value)
-    })
+    });
     this.props.setWeirdness(parseInt(e.target.value));
-    this.props.setSearchResult(this.props.searchedTerm, parseInt(e.target.value))
+    this.props.setSearchResult(
+      this.props.searchedTerm,
+      parseInt(e.target.value)
+    );
   };
 
   render() {
@@ -40,6 +43,10 @@ class SearchResultsContainer extends React.Component {
 const mapStateToProps = state => ({
   searchResult: state.searchResult,
   searchedTerm: state.searchedTerm
-})
+});
 
-export default connect(mapStateToProps, { setWeirdness, setSearchResult, likeGif })(SearchResultsContainer);
+export default connect(mapStateToProps, {
+  setWeirdness,
+  setSearchResult,
+  likeGif
+})(SearchResultsContainer);

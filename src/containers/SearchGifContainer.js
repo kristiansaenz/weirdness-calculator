@@ -15,7 +15,7 @@ class SearchGifContainer extends React.Component {
     this.props.setSearchResult(this.state.search, this.props.searchedWeirdness);
     this.setState({
       search: ""
-    })
+    });
   };
 
   handleSearchChange = e => {
@@ -39,6 +39,8 @@ class SearchGifContainer extends React.Component {
 
 const mapStateToProps = state => ({
   searchedWeirdness: state.searchedWeirdness
-})
+});
 
-export default connect(mapStateToProps, { setSearchTerm, setSearchResult })(SearchGifContainer);
+export default connect(mapStateToProps, { setSearchTerm, setSearchResult })(
+  SearchGifContainer
+);

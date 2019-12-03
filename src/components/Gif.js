@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Gif(props) {
   return (
-    <article className="message is-info">
+    <article className="message is-info is-equal-height">
       <div className="message-header">
       <p>{props.gif.title}</p>
         {props.deleteButtons ? 
@@ -13,7 +13,7 @@ function Gif(props) {
       <div className="message-body">
         <figure className="image is-2by1">
           <img
-            src={props.gif.url}
+            src={props.gif.url} alt={props.gif.title}
           />
         </figure>
       </div>

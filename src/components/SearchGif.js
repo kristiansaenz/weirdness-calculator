@@ -8,13 +8,13 @@ function SearchGif(props) {
           <input
             className="input"
             type="text"
-            value={props.searchedGif}
+            value={props.searchInput}
             onChange={props.handleChange}
             placeholder="Find a GIF"
           />
         </div>
         <div className="control">
-          <a
+          <a 
             className="button is-info"
             type="submit"
             value="Submit"

@@ -9,3 +9,7 @@ export const CLEAR_SEARCH_RESULT = "CLEAR_SEARCH_RESULT"
 export const LIKE_GIF = "LIKE_GIF"
 export const UNLIKE_GIF = "UNLIKE_GIF"
 export const CLEAR_LIST = "CLEAR_LIST"
+
+//errors actions
+export const SET_LIKE_ERROR = "SET_LIKE_ERROR"
+export const CLEAR_LIKE_ERROR = "CLEAR_LIKE_ERROR"

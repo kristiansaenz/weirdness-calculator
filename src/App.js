@@ -1,7 +1,5 @@
 import React from "react";
 import "./App.scss";
-import Header from "./layout/Header";
-import Footer from "./layout/Footer";
 import SearchGifContainer from "./containers/SearchGifContainer";
 import LikedGifsContainer from "./containers/LikedGifsContainer";
 import SearchResultsContainer from "./containers/SearchResultsContainer"

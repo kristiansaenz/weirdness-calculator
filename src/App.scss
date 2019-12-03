@@ -2,6 +2,7 @@
 @import "~bulma-slider";
 
 $p-font-size: 2vh;
+$font-color: #5a5a5a;
 $title-font-size: 3vh;
 $header-font-size: 4vh;
 $search-section-color: bisque;
@@ -18,6 +19,7 @@ $liked-gifs-section-color: aquamarine;
 
 .title {
   font-size: $title-font-size;
+  color: $font-color;
 }
 
 .is-hero-text {
@@ -28,8 +30,19 @@ $liked-gifs-section-color: aquamarine;
   margin-top: 3rem;
 }
 
+.error-msg {
+  margin: .5rem;
+}
+
 p {
   font-size: $p-font-size;
+  color: $font-color;
+}
+
+.is-equal-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* Layout Sections */
@@ -62,6 +75,7 @@ p {
 .search-results {
   margin: 2rem;
   text-align: center;
+  height: 34rem;
 }
 
 .like-icon {
@@ -71,6 +85,12 @@ p {
 .result-box {
   width: 25rem;
   margin: auto;
+  min-height: 15rem;
+}
+
+.like-button-area {
+  margin: 1rem 1rem 3rem 1rem;
+  height: 3rem;
 }
 
 /* Liked Gifs Section */
@@ -103,6 +123,15 @@ p {
 .results-section {
   text-align: center;
   min-height: 25rem;
+}
+
+/* Footer */
+.footer-icon {
+  height: 2rem;
+}
+
+.bulma-badge {
+  margin: auto;
 }
 
 @media only screen and (max-width: 730px) {

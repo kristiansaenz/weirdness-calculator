@@ -22,21 +22,30 @@ function LikedGifs(props) {
       </div>
       <div className="calculate-section">
         {props.gifs.length >= 5 ? (
-          <p>
-            Oh yeah! Time to calculate your score. Hit that calculate button :D
-          </p>
+          <React.Fragment>
+            <p>
+              Oh yeah! Time to calculate your score. Hit that calculate button
+              :D
+            </p>
+            <br />
+            <Link to="/results">
+              <button className="button is-info calc-button">
+                Calculate Your Weirdness
+              </button>
+            </Link>
+          </React.Fragment>
         ) : (
-          <p>
-            You must <i>like</i> {likesNeeded()} more gifs to calculate your
-            score!
-          </p>
+          <React.Fragment>
+            <p>
+              You must <i>like</i> {likesNeeded()} more gifs to calculate your
+              score!
+            </p>
+            <br />
+            <a className="button is-info calc-button" disabled>
+              Calculate Your Weirdness
+            </a>
+          </React.Fragment>
         )}
-        <br />
-        <Link to="/results">
-          <button className="button is-info calc-button">
-            Calculate Your Weirdness
-          </button>
-        </Link>
       </div>
     </div>
   );

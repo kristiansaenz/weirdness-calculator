@@ -53,6 +53,7 @@ p {
 }
 
 .is-results-container {
+  padding: 2rem;
   background-color: $search-results-section-color;
   border-radius: 0rem 0rem 0rem 2rem;
 }
@@ -73,7 +74,6 @@ p {
 
 /* Search Results Section */
 .search-results {
-  margin: 2rem;
   text-align: center;
   height: 34rem;
 }
@@ -135,7 +135,28 @@ p {
 }
 
 @media only screen and (max-width: 730px) {
+
+  .section {
+    padding: .75rem;
+  }
+
   .result-box {
     width: auto;
+  }
+
+  .is-search-container {
+    background-color: $search-section-color;
+    border-radius: 0;
+    padding: 2rem;
+  }
+  
+  .is-results-container {
+    background-color: $search-results-section-color;
+    border-radius: 0;
+  }
+  
+  .is-liked-gifs-container {
+    background-color: $liked-gifs-section-color;
+    border-radius: 0;
   }
 }
